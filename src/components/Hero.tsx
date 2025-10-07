@@ -12,17 +12,17 @@ export const Hero = () => {
           alt="Construction materials warehouse" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0  bg-background/60" />
+        <div className="absolute inset-0  bg-black/70" />
       </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4 animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-[#c8c8c8] text-foreground leading-tight">
               Premium Construction Materials Procurement
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white  text-muted-foreground max-w-2xl mx-auto">
               Your trusted partner for high-quality construction materials. Fast delivery, competitive pricing, exceptional service.
             </p>
           </div>
