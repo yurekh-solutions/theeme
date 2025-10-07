@@ -19,10 +19,10 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4 animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-[#c8c8c8] text-foreground leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-[#c8c8c8] leading-tight">
               Premium Construction Materials Procurement
             </h1>
-            <p className="text-xl md:text-2xl text-white  text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#e4dcd1] text-muted max-w-2xl mx-auto">
               Your trusted partner for high-quality construction materials. Fast delivery, competitive pricing, exceptional service.
             </p>
           </div>
@@ -38,17 +38,17 @@ export const Hero = () => {
           </div>
 
           {/* Feature Pills */}
-          <div className="flex flex-wrap gap-4 justify-center pt-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-wrap gap-4 justify-center pt-8 animate-fade-in" >
             <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border transition-all duration-300 hover:scale-110 hover:shadow-md hover:border-primary">
-              <Package className="h-5 w-5 text-primary animate-float" />
+              <Package className="h-5 w-5 text-primary " />
               <span className="text-sm font-medium">Wide Selection</span>
             </div>
             <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border transition-all duration-300 hover:scale-110 hover:shadow-md hover:border-primary" style={{ animationDelay: "0.1s" }}>
-              <Truck className="h-5 w-5 text-primary animate-float" style={{ animationDelay: "0.3s" }} />
+              <Truck className="h-5 w-5 text-primary "  />
               <span className="text-sm font-medium">Fast Delivery</span>
             </div>
             <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border transition-all duration-300 hover:scale-110 hover:shadow-md hover:border-primary" style={{ animationDelay: "0.2s" }}>
-              <Shield className="h-5 w-5 text-primary animate-float" style={{ animationDelay: "0.6s" }} />
+              <Shield className="h-5 w-5 text-primary " style={{ animationDelay: "0.6s" }} />
               <span className="text-sm font-medium">Quality Assured</span>
             </div>
           </div>
