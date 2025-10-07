@@ -1,0 +1,443 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  /* Theme 1: Dark Walnut */
+  :root[data-theme="walnut"] {
+    --background: 35 25% 95%;
+    --foreground: 25 40% 15%;
+    --primary: 25 45% 20%;
+    --primary-foreground: 35 35% 92%;
+    --secondary: 35 30% 85%;
+    --secondary-foreground: 25 40% 15%;
+    --accent: 30 50% 65%;
+    --accent-foreground: 25 40% 15%;
+    --muted: 35 20% 88%;
+    --muted-foreground: 25 20% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 40% 15%;
+    --border: 35 20% 80%;
+    --input: 35 20% 80%;
+    --ring: 25 45% 20%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 2: Concrete Modern */
+  :root[data-theme="concrete"] {
+    --background: 210 15% 96%;
+    --foreground: 210 25% 20%;
+    --primary: 210 20% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 15% 90%;
+    --secondary-foreground: 210 25% 20%;
+    --accent: 210 30% 60%;
+    --accent-foreground: 0 0% 98%;
+    --muted: 210 10% 92%;
+    --muted-foreground: 210 15% 45%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 25% 20%;
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 210 20% 30%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 3: Construction Rust */
+  :root[data-theme="rust"] {
+    --background: 35 40% 95%;
+    --foreground: 15 50% 20%;
+    --primary: 15 60% 45%;
+    --primary-foreground: 35 30% 98%;
+    --secondary: 35 35% 88%;
+    --secondary-foreground: 15 50% 20%;
+    --accent: 20 70% 55%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 35 25% 90%;
+    --muted-foreground: 15 30% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 15 50% 20%;
+    --border: 35 25% 82%;
+    --input: 35 25% 82%;
+    --ring: 15 60% 45%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 4: Charcoal Premium */
+  :root[data-theme="charcoal"] {
+    --background: 40 20% 94%;
+    --foreground: 0 0% 15%;
+    --primary: 0 0% 20%;
+    --primary-foreground: 40 25% 95%;
+    --secondary: 40 15% 85%;
+    --secondary-foreground: 0 0% 15%;
+    --accent: 40 40% 70%;
+    --accent-foreground: 0 0% 15%;
+    --muted: 40 10% 88%;
+    --muted-foreground: 0 0% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --border: 40 10% 80%;
+    --input: 40 10% 80%;
+    --ring: 0 0% 20%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 5: Terracotta Earth */
+  :root[data-theme="terracotta"] {
+    --background: 40 35% 96%;
+    --foreground: 10 45% 25%;
+    --primary: 10 55% 42%;
+    --primary-foreground: 40 30% 98%;
+    --secondary: 40 30% 88%;
+    --secondary-foreground: 10 45% 25%;
+    --accent: 15 60% 58%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 10 30% 42%;
+    --card: 0 0% 100%;
+    --card-foreground: 10 45% 25%;
+    --border: 40 20% 83%;
+    --input: 40 20% 83%;
+    --ring: 10 55% 42%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 6: Slate Professional */
+  :root[data-theme="slate"] {
+    --background: 30 30% 96%;
+    --foreground: 215 30% 25%;
+    --primary: 215 35% 35%;
+    --primary-foreground: 30 25% 98%;
+    --secondary: 30 20% 88%;
+    --secondary-foreground: 215 30% 25%;
+    --accent: 215 40% 55%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 30 15% 90%;
+    --muted-foreground: 215 20% 45%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 25%;
+    --border: 30 15% 84%;
+    --input: 30 15% 84%;
+    --ring: 215 35% 35%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 7: Forest Sustainable */
+  :root[data-theme="forest"] {
+    --background: 45 25% 95%;
+    --foreground: 150 40% 20%;
+    --primary: 150 45% 28%;
+    --primary-foreground: 45 30% 97%;
+    --secondary: 45 20% 86%;
+    --secondary-foreground: 150 40% 20%;
+    --accent: 150 50% 45%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 45 15% 88%;
+    --muted-foreground: 150 25% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 40% 20%;
+    --border: 45 15% 81%;
+    --input: 45 15% 81%;
+    --ring: 150 45% 28%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 8: Mahogany Luxury */
+  :root[data-theme="mahogany"] {
+    --background: 40 30% 94%;
+    --foreground: 15 50% 18%;
+    --primary: 15 55% 25%;
+    --primary-foreground: 45 45% 95%;
+    --secondary: 40 25% 85%;
+    --secondary-foreground: 15 50% 18%;
+    --accent: 45 70% 55%;
+    --accent-foreground: 15 50% 18%;
+    --muted: 40 18% 87%;
+    --muted-foreground: 15 30% 38%;
+    --card: 0 0% 100%;
+    --card-foreground: 15 50% 18%;
+    --border: 40 18% 78%;
+    --input: 40 18% 78%;
+    --ring: 15 55% 25%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 9: Sand Dune */
+  :root[data-theme="sand"] {
+    --background: 45 35% 96%;
+    --foreground: 40 40% 18%;
+    --primary: 40 45% 32%;
+    --primary-foreground: 45 40% 98%;
+    --secondary: 45 25% 88%;
+    --secondary-foreground: 40 40% 18%;
+    --accent: 42 60% 62%;
+    --accent-foreground: 40 30% 15%;
+    --muted: 45 20% 90%;
+    --muted-foreground: 40 25% 42%;
+    --card: 0 0% 100%;
+    --card-foreground: 40 40% 18%;
+    --border: 45 18% 82%;
+    --input: 45 18% 82%;
+    --ring: 40 45% 32%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 10: Copper Metallic */
+  :root[data-theme="copper"] {
+    --background: 25 30% 95%;
+    --foreground: 18 55% 22%;
+    --primary: 18 65% 38%;
+    --primary-foreground: 25 30% 98%;
+    --secondary: 25 25% 86%;
+    --secondary-foreground: 18 55% 22%;
+    --accent: 22 75% 52%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 25 18% 88%;
+    --muted-foreground: 18 35% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 18 55% 22%;
+    --border: 25 18% 80%;
+    --input: 25 18% 80%;
+    --ring: 18 65% 38%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 11: Stone Gray */
+  :root[data-theme="stone"] {
+    --background: 220 15% 96%;
+    --foreground: 220 30% 22%;
+    --primary: 220 28% 32%;
+    --primary-foreground: 220 15% 98%;
+    --secondary: 220 12% 88%;
+    --secondary-foreground: 220 30% 22%;
+    --accent: 220 35% 58%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 10% 90%;
+    --muted-foreground: 220 18% 44%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 22%;
+    --border: 220 12% 84%;
+    --input: 220 12% 84%;
+    --ring: 220 28% 32%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 12: Ivory Cream */
+  :root[data-theme="ivory"] {
+    --background: 48 40% 98%;
+    --foreground: 30 35% 20%;
+    --primary: 30 40% 28%;
+    --primary-foreground: 48 35% 98%;
+    --secondary: 48 28% 92%;
+    --secondary-foreground: 30 35% 20%;
+    --accent: 38 55% 65%;
+    --accent-foreground: 30 35% 20%;
+    --muted: 48 22% 94%;
+    --muted-foreground: 30 22% 45%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 35% 20%;
+    --border: 48 20% 88%;
+    --input: 48 20% 88%;
+    --ring: 30 40% 28%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 13: Espresso Dark */
+  :root[data-theme="espresso"] {
+    --background: 28 22% 94%;
+    --foreground: 20 60% 15%;
+    --primary: 20 65% 22%;
+    --primary-foreground: 28 25% 96%;
+    --secondary: 28 18% 84%;
+    --secondary-foreground: 20 60% 15%;
+    --accent: 25 50% 48%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 28 15% 86%;
+    --muted-foreground: 20 35% 38%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 60% 15%;
+    --border: 28 15% 78%;
+    --input: 28 15% 78%;
+    --ring: 20 65% 22%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 14: Clay Red */
+  :root[data-theme="clay"] {
+    --background: 35 35% 95%;
+    --foreground: 8 50% 22%;
+    --primary: 8 58% 38%;
+    --primary-foreground: 35 30% 97%;
+    --secondary: 35 28% 87%;
+    --secondary-foreground: 8 50% 22%;
+    --accent: 12 68% 58%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 35 20% 89%;
+    --muted-foreground: 8 32% 42%;
+    --card: 0 0% 100%;
+    --card-foreground: 8 50% 22%;
+    --border: 35 20% 81%;
+    --input: 35 20% 81%;
+    --ring: 8 58% 38%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 15: Granite Dark */
+  :root[data-theme="granite"] {
+    --background: 200 12% 95%;
+    --foreground: 200 35% 18%;
+    --primary: 200 32% 28%;
+    --primary-foreground: 200 15% 97%;
+    --secondary: 200 10% 86%;
+    --secondary-foreground: 200 35% 18%;
+    --accent: 200 38% 52%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 200 8% 88%;
+    --muted-foreground: 200 20% 42%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 35% 18%;
+    --border: 200 10% 80%;
+    --input: 200 10% 80%;
+    --ring: 200 32% 28%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 16: Limestone Light */
+  :root[data-theme="limestone"] {
+    --background: 50 30% 97%;
+    --foreground: 42 38% 20%;
+    --primary: 42 42% 30%;
+    --primary-foreground: 50 28% 98%;
+    --secondary: 50 22% 90%;
+    --secondary-foreground: 42 38% 20%;
+    --accent: 48 52% 62%;
+    --accent-foreground: 42 30% 15%;
+    --muted: 50 18% 92%;
+    --muted-foreground: 42 22% 44%;
+    --card: 0 0% 100%;
+    --card-foreground: 42 38% 20%;
+    --border: 50 18% 86%;
+    --input: 50 18% 86%;
+    --ring: 42 42% 30%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 17: Bronze Industrial */
+  :root[data-theme="bronze"] {
+    --background: 30 28% 94%;
+    --foreground: 22 52% 20%;
+    --primary: 22 58% 32%;
+    --primary-foreground: 30 25% 96%;
+    --secondary: 30 22% 85%;
+    --secondary-foreground: 22 52% 20%;
+    --accent: 26 68% 50%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 30 18% 87%;
+    --muted-foreground: 22 32% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 22 52% 20%;
+    --border: 30 18% 79%;
+    --input: 30 18% 79%;
+    --ring: 22 58% 32%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 18: Oak Warm */
+  :root[data-theme="oak"] {
+    --background: 38 32% 95%;
+    --foreground: 28 45% 20%;
+    --primary: 28 50% 30%;
+    --primary-foreground: 38 30% 97%;
+    --secondary: 38 25% 87%;
+    --secondary-foreground: 28 45% 20%;
+    --accent: 32 60% 58%;
+    --accent-foreground: 28 35% 15%;
+    --muted: 38 20% 89%;
+    --muted-foreground: 28 28% 42%;
+    --card: 0 0% 100%;
+    --card-foreground: 28 45% 20%;
+    --border: 38 20% 82%;
+    --input: 38 20% 82%;
+    --ring: 28 50% 30%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 19: Steel Blue */
+  :root[data-theme="steel"] {
+    --background: 205 18% 96%;
+    --foreground: 205 42% 20%;
+    --primary: 205 45% 32%;
+    --primary-foreground: 205 18% 98%;
+    --secondary: 205 15% 88%;
+    --secondary-foreground: 205 42% 20%;
+    --accent: 205 52% 55%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 205 12% 90%;
+    --muted-foreground: 205 25% 43%;
+    --card: 0 0% 100%;
+    --card-foreground: 205 42% 20%;
+    --border: 205 15% 83%;
+    --input: 205 15% 83%;
+    --ring: 205 45% 32%;
+    --radius: 0.5rem;
+  }
+
+  /* Theme 20: Sandstone Natural */
+  :root[data-theme="sandstone"] {
+    --background: 40 38% 96%;
+    --foreground: 32 42% 22%;
+    --primary: 32 48% 34%;
+    --primary-foreground: 40 35% 98%;
+    --secondary: 40 28% 88%;
+    --secondary-foreground: 32 42% 22%;
+    --accent: 36 58% 60%;
+    --accent-foreground: 32 35% 18%;
+    --muted: 40 22% 90%;
+    --muted-foreground: 32 25% 43%;
+    --card: 0 0% 100%;
+    --card-foreground: 32 42% 22%;
+    --border: 40 22% 84%;
+    --input: 40 22% 84%;
+    --ring: 32 48% 34%;
+    --radius: 0.5rem;
+  }
+
+  /* Default to Walnut theme */
+  :root {
+    --background: 35 25% 95%;
+    --foreground: 25 40% 15%;
+    --primary: 25 45% 20%;
+    --primary-foreground: 35 35% 92%;
+    --secondary: 35 30% 85%;
+    --secondary-foreground: 25 40% 15%;
+    --accent: 30 50% 65%;
+    --accent-foreground: 25 40% 15%;
+    --muted: 35 20% 88%;
+    --muted-foreground: 25 20% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 40% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 40% 15%;
+    --border: 35 20% 80%;
+    --input: 35 20% 80%;
+    --ring: 25 45% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
